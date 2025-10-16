@@ -1,35 +1,50 @@
 <?php
-namespace App\Filament\Resources;
 
-use App\Filament\Resources\ImportLogResource\Pages;
+namespace App\Filament\Resources\ImportLogs;
+
+use App\Filament\Resources\ImportLogs\Pages\CreateImportLog;
+use App\Filament\Resources\ImportLogs\Pages\EditImportLog;
+use App\Filament\Resources\ImportLogs\Pages\ListImportLogs;
+use App\Filament\Resources\ImportLogs\Schemas\ImportLogForm;
+use App\Filament\Resources\ImportLogs\Tables\ImportLogsTable;
 use App\Models\ImportLog;
+use BackedEnum;
 use Filament\Resources\Resource;
-use Filament\Resources\Table;
-use Filament\Tables;
+use Filament\Schemas\Schema;
+use Filament\Support\Icons\Heroicon;
+use Filament\Tables\Table;
 
 class ImportLogResource extends Resource
 {
     protected static ?string $model = ImportLog::class;
-    protected static ?string $navigationIcon = 'heroicon-o-arrow-down-tray';
-    protected static ?string $navigationLabel = 'Importu vēsture';
+
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+
+    protected static ?string $recordTitleAttribute = 'source';
+
+    public static function form(Schema $schema): Schema
+    {
+        return ImportLogForm::configure($schema);
+    }
 
     public static function table(Table $table): Table
     {
-        return $table
-            ->columns([
-                Tables\Columns\TextColumn::make('source')->label('Avots')->sortable(),
-                Tables\Columns\TextColumn::make('imported_at')->label('Datums')->dateTime()->sortable(),
-                Tables\Columns\TextColumn::make('total_records')->label('Ieraksti'),
-                Tables\Columns\TextColumn::make('errors_count')->label('Kļūdas'),
-            ])
-            ->defaultSort('imported_at', 'desc');
+        return ImportLogsTable::configure($table);
+    }
+
+    public static function getRelations(): array
+    {
+        return [
+            //
+        ];
     }
 
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListImportLogs::route('/'),
+            'index' => ListImportLogs::route('/'),
+            'create' => CreateImportLog::route('/create'),
+            'edit' => EditImportLog::route('/{record}/edit'),
         ];
     }
 }
-
