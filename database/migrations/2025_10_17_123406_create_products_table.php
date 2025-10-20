@@ -12,7 +12,7 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->string('model')->nullable();
-            $table->string('ean')->nullable();
+            $table->string('ean')->unique()->nullable();
             $table->string('category')->nullable();
             $table->json('attributes')->nullable();
             $table->foreignId('brand_id')
