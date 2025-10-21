@@ -20,9 +20,6 @@ class ImportLogForm
                 ->label('Faila tips')
                 ->required(),
 
-            Forms\Components\DateTimePicker::make('imported_at')
-                ->label('Importēts')
-                ->required(),
         ]);
     }
 }

@@ -25,10 +25,6 @@ class ImportLogsTable
                     ->sortable()
                     ->searchable(),
 
-                Tables\Columns\TextColumn::make('imported_at')
-                    ->label('Importēts')
-                    ->dateTime()
-                    ->sortable(),
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('shop_id')
