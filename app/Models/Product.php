@@ -2,15 +2,23 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    protected $fillable = ['name', 'brand', 'model', 'ean', 'category', 'attributes'];
+    use HasFactory;
+
+    protected $fillable = ['name', 'brand_id', 'model', 'ean', 'category', 'attributes'];
 
     protected $casts = [
         'attributes' => 'array',
     ];
+
+    public function brand()
+    {
+        return $this->belongsTo(Brand::class);
+    }
 
     public function offers()
     {
@@ -21,5 +29,10 @@ class Product extends Model
     {
         return $this->hasMany(PriceHistory::class);
     }
-}
 
+    public function shops()
+    {
+        return $this->belongsToMany(Shop::class, 'offers');
+    }
+
+}
