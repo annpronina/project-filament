@@ -2,9 +2,7 @@
 
 namespace App\Filament\Resources\ImportLogs\Tables;
 
-use Filament\Actions\BulkActionGroup;
-use Filament\Actions\DeleteBulkAction;
-use Filament\Actions\EditAction;
+use Filament\Tables;
 use Filament\Tables\Table;
 
 class ImportLogsTable
@@ -13,18 +11,34 @@ class ImportLogsTable
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('id')
+                    ->label('ID')
+                    ->sortable(),
+
+                Tables\Columns\TextColumn::make('shop.name')
+                    ->label('Veikals')
+                    ->sortable()
+                    ->searchable(),
+
+                Tables\Columns\TextColumn::make('file_type')
+                    ->label('Faila tips')
+                    ->sortable()
+                    ->searchable(),
+
+                Tables\Columns\TextColumn::make('imported_at')
+                    ->label('Importēts')
+                    ->dateTime()
+                    ->sortable(),
             ])
             ->filters([
-                //
+                Tables\Filters\SelectFilter::make('shop_id')
+                    ->label('Veikals')
+                    ->relationship('shop', 'name'),
             ])
-            ->recordActions([
-                EditAction::make(),
+            ->searchPlaceholder('Meklēt pēc veikala vai faila tipa...')
+            ->actions([
             ])
-            ->toolbarActions([
-                BulkActionGroup::make([
-                    DeleteBulkAction::make(),
-                ]),
+            ->bulkActions([
             ]);
     }
 }
