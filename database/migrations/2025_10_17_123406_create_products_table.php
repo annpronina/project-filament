@@ -14,11 +14,7 @@ return new class extends Migration {
             $table->string('model')->nullable();
             $table->string('ean')->unique()->nullable();
             $table->string('category')->nullable();
-            $table->json('attributes')->nullable();
-            $table->foreignId('brand_id')
-                ->nullable()
-                ->constrained('brands')
-                ->nullOnDelete();
+            $table->foreignId('brand_id')->nullable()->constrained('brands')->nullOnDelete();
             $table->timestamps();
         });
     }
