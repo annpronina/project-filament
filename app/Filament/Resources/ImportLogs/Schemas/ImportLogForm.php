@@ -20,6 +20,9 @@ class ImportLogForm
                 ->label('Faila tips')
                 ->required(),
 
+            Forms\Components\Hidden::make('imported_at')
+                ->default(now()),    
+
         ]);
     }
 }
