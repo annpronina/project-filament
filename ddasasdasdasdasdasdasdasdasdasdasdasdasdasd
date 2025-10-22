@@ -1,0 +1,98 @@
+[33mcommit 8e7711b166ff0f68789e46399b5e97059b37ef16[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: KristapsTucs <kristapstucs1@gmail.com>
+Date:   Tue Oct 21 17:52:41 2025 +0300
+
+    filament for product and importlog
+
+[33mcommit 718531e1e4276a0cdd3c0ce52c4fd4450e76acb3[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: b2f1800 0e4ea6f
+Author: Anna Pronina <146024756+annpronina@users.noreply.github.com>
+Date:   Tue Oct 21 13:46:58 2025 +0300
+
+    Merge pull request #4 from annpronina/pim-elina
+    
+    fixed model location
+
+[33mcommit 0e4ea6fb520a3069408b0fb7d9fec2298b682c0a[m
+Author: elina <elinaviksne124@gmail.com>
+Date:   Tue Oct 21 10:53:39 2025 +0300
+
+    created errors model, added more relations in product model
+
+[33mcommit e1affebe934f33c7ee5c544a0f33ee1020b3e037[m
+Author: elina <elinaviksne124@gmail.com>
+Date:   Mon Oct 20 15:44:50 2025 +0300
+
+    fixed brand migration
+
+[33mcommit 618f2982bb697139f5c7939f2f81c33ea3fd7ea2[m
+Author: elina <elinaviksne124@gmail.com>
+Date:   Mon Oct 20 15:35:00 2025 +0300
+
+    fixed model location
+
+[33mcommit b2f1800ec3e4693ccadc34358621a3e9a2cff378[m
+Merge: 6bf50d5 2d25869
+Author: Anna Pronina <146024756+annpronina@users.noreply.github.com>
+Date:   Mon Oct 20 13:44:39 2025 +0300
+
+    Merge pull request #3 from annpronina/model-Deivis
+    
+    Created Migrations and Models
+
+[33mcommit 2d25869d2fefa6abaceab8f59f1de09861c41352[m
+Author: deivisstasuls <deivis.stasuls@gmail.com>
+Date:   Mon Oct 20 13:18:19 2025 +0300
+
+    added back ean unique()
+
+[33mcommit 369eda388359e05ede0152d2c8745febdb7ceb18[m
+Author: deivisstasuls <deivis.stasuls@gmail.com>
+Date:   Mon Oct 20 13:13:23 2025 +0300
+
+    created brand migration and model
+
+[33mcommit 37bd706e035606d6bd1049338a9926cef7ae0e45[m
+Author: deivisstasuls <deivis.stasuls@gmail.com>
+Date:   Fri Oct 17 15:40:49 2025 +0300
+
+    created migrations and models
+
+[33mcommit 6bf50d5f15c1e19ea10966ed3b452173a6b176b7[m
+Merge: 76b72d8 488b236
+Author: Anna Pronina <146024756+annpronina@users.noreply.github.com>
+Date:   Thu Oct 16 17:07:21 2025 +0300
+
+    Merge pull request #2 from annpronina/Kristaps-filament
+    
+    Filament resourses and frames added
+
+[33mcommit 488b23688a4781e1c33a819c7fadfb2d9a6dfa21[m[33m ([m[1;31morigin/Kristaps-filament[m[33m, [m[1;32mKristaps-filament[m[33m)[m
+Author: KristapsTucs <kristapstucs1@gmail.com>
+Date:   Thu Oct 16 17:02:07 2025 +0300
+
+    update
+
+[33mcommit 737a06209b0632941d4804e3ebf46dd85c388e3b[m[33m ([m[1;32mkristaps-pim[m[33m)[m
+Author: KristapsTucs <kristapstucs1@gmail.com>
+Date:   Thu Oct 16 16:00:44 2025 +0300
+
+    created frames
+
+[33mcommit ac875ca342e6f472b9bc0470a34684e2a052d381[m
+Author: KristapsTucs <kristapstucs1@gmail.com>
+Date:   Thu Oct 16 15:41:47 2025 +0300
+
+    created resources
+
+[33mcommit 6ca7f16a47a7a5d4077ffa483dcacdd5060ec866[m
+Author: KristapsTucs <kristapstucs1@gmail.com>
+Date:   Thu Oct 16 14:54:42 2025 +0300
+
+    models
+
+[33mcommit 76b72d892b726ccfd2f8620e26ed1f7df1f15f96[m
+Author: annpronina <anna.proinar1ck@gmail.com>
+Date:   Fri Oct 3 13:31:04 2025 +0300
+
+    Initial setup

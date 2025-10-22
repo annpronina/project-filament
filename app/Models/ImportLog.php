@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class ImportLog extends Model
 {
+    protected $table = 'import_log';
+
     use HasFactory;
 
     protected $fillable = ['shop_id', 'file_type', 'imported_at'];
